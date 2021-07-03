@@ -75,3 +75,13 @@ if (!String.prototype.percentOf) {
         return vlPercent;
     };
 }
+
+if(!String.prototype.removeAcentos) {
+    String.prototype.removeAcentos = (text) => {
+      const a = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧÀÁÄÂÃÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛÑÇßŸŒÆŔŚŃṔẂǴǸḾǗẌŹḦ';
+      const b = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzhAAAAAEEEEIIIIOOOOUUUUNCSYOARSNPWGNMUXZH';
+      const p = new RegExp(a.split('').join('|'), 'g');
+      return text.toString()
+        .replace(p, c => b.charAt(a.indexOf(c)));
+    }
+}
