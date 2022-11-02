@@ -1,6 +1,7 @@
 /**
  * Criando extensões no Angular
  * Retirado e adaptado de https://www.oodlestechnologies.com/blogs/Extending-Native-JavaScript-Prototypes-In-Angular/
+ * Importar este arquivo no projeto em app.module.ts assim: "import './caminho/string-extension';"
  */
 export { }
 
